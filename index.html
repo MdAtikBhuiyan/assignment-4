@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <div id="all-content">
+        <header class="content" class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Booking Section-->
+        <main class="main-content container content">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
+                <div class="input-group">
+                    <label for="">Flying From</label>
+                    <input id="fromflyingPlace" class="inp-style flight-deatails" type="text"
+                        placeholder="Dhake, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input id="toflyingPlace" class="inp-style flight-deatails" type="text"
+                        placeholder="New York, United States">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                            <input id="departureDate" class="inp-style flight-deatails" type="date">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input id="returnDate" class="inp-style flight-deatails" type="date">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div class="ticket-box">
+                        <label for="">First Class ($150)</label>
+
+                        <input id="firstClassInput" class="inp-style inp-width" type="number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="updateAmount('firstClassInput', true)"
+                            class="btn btn-default border"><span>+</span></button>
+                        <button onclick="updateAmount('firstClassInput', false)"
+                            class="btn btn-default border"><span>-</span></button>
+                    </div>
+                </div>
+
+                <div class="input-group f-class">
+                    <div class="ticket-box">
+                        <label for="">Economy ($100)</label>
+                        <input id="economyClassInput" class="inp-style inp-width" type="number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick='updateAmount("economyClassInput",true)'
+                            class="btn btn-default border"><span>+</span></button>
+                        <button onclick='updateAmount("economyClassInput",false)'
+                            class="btn btn-default border"><span>-</span></button>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="sub-total">500</span></p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="tax">50</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="total">550</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="confirmationMessage()" class="btn-style">Book Now</button>
+            </div>
+
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                    veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt
+                    nobise voluptatibus quam</p>
+            </div>
+        </main>
+    </div>
+    <div id="confirmation-box">
+        <div class="container confirmation-content">
+            <h1 class="text-center text-success mb-5">&#10004; Your Booking is Confirmed</h1>
+            <h5>First Class Total Ticket  : <span id="forFirstClassSeatMesage"></span></h5>
+            <h5>First Class Ticket Bill : $ <span id="forFirstClassMesageBill"></span></h5>
+            <hr>
+            <h5>Economy Class Total Ticket : <span id="forEconomyClassSeatMesage"></span></h5>
+            <h5>Economy Class Ticket Bill : $ <span id="forEconomyClassMesageBill"></span></h5>
+            <hr>
+            <h5>Subtotal : $<span id="forSubtotalMessage"></span></h5>
+            <h5>Charge 10% VAT : $ <span id="forTaxMessage"></span></h5>
+            <hr>
+            <h2 class="text-info"> Total Bill : $ <span id="forTotalMesage"></span></h2>
+        </div>
+    </div>
+
+    <!-- Js file -->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
