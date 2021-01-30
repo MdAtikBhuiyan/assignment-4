@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 100vh;
 }
 
 nav{
@@ -126,7 +127,6 @@ nav ul li a:hover, a.active{
 #confirmation-box{
     display: none;
     color:white;
-    padding: 200px;
 }
 #confirmation-box hr{
     height: 3px;
@@ -134,8 +134,9 @@ nav ul li a:hover, a.active{
 }
 .confirmation-content{
     width: 70%;
-    margin: 0 auto;
+    margin: 200px auto;
     background: radial-gradient(#627b72, transparent);
     border-radius: 10px;
     padding: 60px;
+    box-shadow: 1px 1px 15px #5f8467;
 }
