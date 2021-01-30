@@ -42,6 +42,8 @@ function calculateTotal(){
 
 }
 
+// confirmation message after clicking book now button
+
 function confirmationMessage(){
     document.getElementById('all-content').style.display = 'none';
     document.getElementById('confirmation-box').style.display = 'block';
